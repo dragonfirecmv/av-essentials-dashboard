@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
+
+@import url('../fonts/Geomanist/typeface.scss');
+@import url('../fonts/Manrope/typeface.scss');
+@import url('../fonts/Gilroy/typeface.scss');
+@import url('../fonts/SourceSansPro/typeface.scss');
+
+@import "./light.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: "Manrope", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", sans-serif;
+  
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  &.no-scroll {
+    overflow: hidden;
+    position: fixed;
+  }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}

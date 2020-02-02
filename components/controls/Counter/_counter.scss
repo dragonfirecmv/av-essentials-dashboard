@@ -1,0 +1,50 @@
+.av-counter {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+  .area-input {
+    overflow: hidden;
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+    input {
+      
+      height: 100%;
+      padding: 0;
+      position: relative;
+      
+      border: none;
+      text-align: center;
+
+      font-size: 12pt;
+    }
+  }
+
+  &.default {
+    width: 120px;
+    height: 32px;
+
+    .area-minbtn,
+    .area-maxbtn {
+      width: 32px;
+    }
+  }
+
+  &.small {
+    width: 88px;
+    height: 24px;
+
+    .area-minbtn,
+    .area-maxbtn {
+      width: 24px;
+    }
+
+    input {
+      font-size: 11pt;
+    }
+  }
+}

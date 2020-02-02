@@ -1,0 +1,223 @@
+.av-input {
+  width: 100%;
+  margin: 4px 0;
+  position: relative;
+  overflow: visible;
+  transition: 0.2s all;
+
+  & > .input-label {
+    padding-bottom: 8px;
+    color: var(--color-textbox-label);
+  }
+
+  & > .input-enclosing {
+    background-color: var(--color-textbox-background);
+    border: 1px solid var(--color-textbox-background);
+    border-radius: 4px;
+
+    & > input {
+      width: 100%;
+      height: 100%;
+      padding: 0px 16px;
+      position: relative;
+      border: none;
+
+      background-color: transparent;
+      transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
+      -webkit-appearance: none;
+
+      &::-webkit-input-placeholder {
+        color: var(--color-text-em-disable);
+      }
+      &::-moz-placeholder {
+        color: var(--color-text-em-disable);
+      }
+      &:-ms-input-placeholder {
+        color: var(--color-text-em-disable);
+      }
+      &:-moz-placeholder {
+        color: var(--color-text-em-disable);
+      }
+    }
+  }
+
+  & > .input-info {
+    visibility: hidden;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    padding-left: 2px;
+
+    font-size: 9pt;
+    font-weight: 700;
+  }
+
+  &.size-small > .input-enclosing {
+    height: 40px;
+
+    & > input {
+      padding: 0px 12px;
+      font-size: 14px;
+    }
+  }
+
+  &.size-default > .input-enclosing {
+    height: 48px;
+
+    & > input {
+      padding: 0px 14px;
+      font-size: 16px;
+    }
+  }
+
+  &.size-large > .input-enclosing {
+    height: 56px;
+
+    & > input {
+      padding: 0px 14px;
+      font-size: 16px;
+    }
+  }
+
+  &.focused {
+    & > .input-label {
+      color: var(--color-textbox-label-active);
+    }
+
+    & > .input-enclosing {
+      border: 1px solid var(--color-textbox-border-hover);
+    }
+  }
+
+  &.error {
+    & > .input-label {
+      color: var(--color-textbox-error);
+    }
+    
+    & > .input-enclosing {
+      background-color: var(--color-textbox-error-background);
+      border: 1px solid var(--color-textbox-error);
+    }
+
+    & > .input-info {
+      visibility: visible;
+      color: var(--color-textbox-error);
+    }
+  }
+
+  &.locked {
+
+    & > .input-enclosing > input {
+      color: var(--color-text-em-disable);
+      pointer-events:none;
+    }
+  }
+
+  // &.style-modern {
+
+  //   &:hover {
+  //     border: 1px solid var(--color-textbox-border-hover);
+  //   }
+
+  //   & > input {
+  //     &::-webkit-input-placeholder {
+  //       color: var(--color-textbox-modern-placeholder);
+  //     }
+  //     &::-moz-placeholder {
+  //       color: var(--color-textbox-modern-placeholder);
+  //     }
+  //     &:-ms-input-placeholder {
+  //       color: var(--color-textbox-modern-placeholder);
+  //     }
+  //     &:-moz-placeholder {
+  //       color: var(--color-textbox-modern-placeholder);
+  //     }
+  //   }
+  // }
+
+  // &.focused {
+  //   border: 1px solid var(--color-textbox-border-hover);
+  // }
+
+  // &.size-small {
+  //   height: 40px;
+
+  //   & > input {
+  //     padding: 0px 12px;
+  //     font-size: 14px;
+  //   }
+  // }
+
+  // &.size-default {
+  //   height: 48px;
+
+  //   & > input {
+  //     padding: 0px 14px;
+  //     font-size: 16px;
+  //   }
+  // }
+
+  // &.size-large {
+  //   height: 56px;
+
+  //   & > input {
+  //     padding: 0px 16px;
+  //     font-size: 16px;
+
+  //     & + label {
+  //       position: absolute;
+  //       top: 24px;
+  //       left: 16px;
+
+  //       // color: white;
+  //       font-family: "Geomanist", sans-serif;
+  //       font-size: 12px;
+  //       font-weight: 500;
+  //       line-height: 24px;
+
+  //       opacity: 0;
+  //       pointer-events: none;
+  //       transition: 0.1s all ease-in-out;
+  //     }
+  //   }
+
+  //   &.label-on {
+  //     & > input {
+  //       padding: 24px 16px 8px 16px;
+
+  //       &::-webkit-input-placeholder {
+  //         color: rgba(0, 0, 0, 0);
+  //       }
+  //       &::-moz-placeholder {
+  //         color: rgba(0, 0, 0, 0);
+  //       }
+  //       &:-ms-input-placeholder {
+  //         color: rgba(0, 0, 0, 0);
+  //       }
+  //       &:-moz-placeholder {
+  //         color: rgba(0, 0, 0, 0);
+  //       }
+
+  //       & + label {
+  //         top: 5px;
+  //         opacity: 1;
+  //         // color: #28cc70;
+  //         color: var(--color-textbox-placeholder-active);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // &.error {
+  //   border: 1px solid var(--color-textbox-modern-error-border);
+
+  //   &.style-modern {
+  //     background-color: var(--color-textbox-modern-error-background);
+  //   }
+
+  //   & > input {
+  //     & + label {
+  //       color: var(--color-textbox-modern-error-border) !important;
+  //     }
+  //   }
+  // }
+}

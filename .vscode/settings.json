@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "**/*.lock": true,
+    "**/dist": true,
+    "**/server": true,
+    "index.html": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

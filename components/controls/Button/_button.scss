@@ -1,0 +1,151 @@
+.av-button {
+  display: block;
+  position: relative;
+
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+
+  &.default {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 10pt;
+  }
+
+  &.small {
+    height: 32px;
+    padding: 0 16px;
+    font-size: 9pt;
+  }
+
+  &.large {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 12pt;
+  }
+
+  &.conform {
+    height: 100%;
+    
+    padding: 0;
+    font-size: 10pt;
+  }
+
+
+  &.shape-rounded {
+    border-radius: 4px;
+  }
+
+  &.shape-rectangle {
+    border-radius: 0;
+  }
+
+  &.shape-pill {
+    border-radius: 50px;
+  }
+
+  
+  &.primary {
+    background-color: var(--color-button-primary-background-default);
+    color: white;
+
+    &:hover {
+      background-color: var(--color-button-primary-background-hover);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &:active {
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.secondary {
+    border: 1px solid var(--color-button-primary-background-default);
+
+    color: var(--color-primary);
+    font-weight: 700;
+
+    &:hover {
+      border: 1px solid var(--color-button-primary-background-hover);
+    }
+
+    &:active {
+      border: 1px solid var(--color-button-primary-background-hover);
+    }
+  }
+
+  &.tertiary {
+    color: rgba(0, 0, 0, 1);
+
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--color-button-primary-background-default);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  
+  &.danger {
+    background-color: rgb(255, 77, 79);
+    color: white;
+
+    &:hover {
+      background-color: rgb(255, 120, 116);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &:active {
+      background-color: rgb(217, 55, 62);
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+
+  & > .enclosure-loader,
+  & > .enclosure-content {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & > .enclosure-loader {
+    
+    position: absolute;
+    z-index: 0;
+  }
+
+  & > .enclosure-content {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    &.hide {
+      visibility: hidden;
+    }
+  }
+  
+
+  &.loading {
+    pointer-events: none;
+
+    &.tertiary {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    .enclosure-content {
+      visibility: hidden;;
+    }
+  }
+}

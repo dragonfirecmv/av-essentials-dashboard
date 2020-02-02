@@ -1,0 +1,38 @@
+.panel-goods-item-edit-details-view {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 32px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > .section {
+    width: 100%;
+    overflow: visible;
+
+    &.picture {
+      overflow: visible;
+      margin-bottom: 8px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > .picture-enclosing {
+        width: 144px;
+        height: 144px;
+        margin-bottom: 8px;
+        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+        border-radius: 999px;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

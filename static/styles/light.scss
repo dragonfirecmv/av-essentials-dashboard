@@ -1,0 +1,41 @@
+[data-theme="light"] {
+  --color-primary:        #03969e;
+  --color-primary-light-1:#22c3cb;
+
+  --color-drawer-background:          rgb(249, 249, 249);
+  --color-drawer-border-right:          rgba(0, 0, 0, 0.05);
+  --color-drawer-tab-background:      rgb(249, 249, 249);
+  --color-drawer-tab-active-background: rgb(67, 124, 240);
+
+  --color-menubar-background:      #ffffff;
+  --color-root-base-background:    #fff;
+  --color-panel-base-background:   #ffffff;
+  --color-panel-footer-background: #f6f6f6;
+
+  --color-modal-title-background:  #f6f6f6;
+  --color-modal-base-background:   #fff;
+  --color-modal-action-background: #f6f6f6;
+
+  --color-button-primary-background-default: #03969e;
+  --color-button-primary-background-hover:   #22c3cb;
+
+  --color-link:       #03969e;
+  --color-link-hover: #22c3cb;
+
+  --color-loading-background: rgba(3, 150, 158, 0.2 );
+  --color-loading-prominent:  #03969e;
+
+  --color-textbox-background:       rgb(248, 247, 249);
+  --color-textbox-border-hover:     rgb(67, 124, 240);
+  --color-textbox-placeholder:      rgb(191, 188, 201);
+  --color-textbox-label:            rgb(132, 127, 151);
+  --color-textbox-label-active:     rgb(38, 30, 73);
+  --color-textbox-text:             #282828;
+  --color-textbox-error:            rgb(235, 64, 89);
+  --color-textbox-error-background: rgb(254, 247, 250);
+
+  --color-text-em-first:   rgba(0, 0, 0, 1);
+  --color-text-em-hi:      rgba(0, 0, 0, 0.87);
+  --color-text-em-med:     rgba(0, 0, 0, 0.6);
+  --color-text-em-disable: rgba(0, 0, 0, 0.38);
+}

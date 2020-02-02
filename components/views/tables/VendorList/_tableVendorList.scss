@@ -1,0 +1,152 @@
+.view-table-vendor-list {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  & > .table {
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+    display: grid;
+    grid-template-columns: 72px 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . . . .";
+    gap: 16px;
+
+    &.header {
+      background-color: white;
+      padding: 8px 0;
+
+      &.sticky {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+    }
+
+    &.row {
+      .table-col {
+        display: flex;
+          flex-direction: column;
+
+        &.picture {
+          justify-content: center;
+
+          .picture-enclosing {
+            height: 56px;
+            margin: 8px;
+            border: 1px solid rgba($color: #000000, $alpha: 0.05);
+            border-radius: 4px;
+
+            & > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &.info {
+          justify-content: center;
+        }
+
+        &.categories {
+          padding: 4px 0;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-content: center;
+          align-items: center;
+        }
+
+        &.address {
+          width: 100%;
+          height: 100%;
+
+          align-content: flex-start;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        &.actions {
+          display: none;
+          padding-right: 16px;
+
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          align-content: center;
+          align-items: center;
+
+          svg {
+            width: 16px;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: rgba(66, 74, 91, 0.02);
+
+        .table-col.actions {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  & > .area-placeholder {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+  }
+
+  &.lite {
+    & > .table {
+      grid-template-columns: 72px 1fr;
+      grid-template-areas: ". .";
+    }
+  }
+
+  &.selectable {
+    cursor: pointer;
+  }
+
+
+  .tx {
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(66, 74, 91);
+
+    &.table-header {
+      font-family: "Gilroy", sans-serif;
+      font-weight: 700;
+    }
+
+    &.info-title {
+      font-size: 16pt;
+      font-weight: 700;
+
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+      overflow-wrap: break-word;
+    }
+
+    &.info-subtitle {
+      font-size: 12pt;
+      font-weight: 500;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &.address-text {
+      height: fit-content;
+      font-size: 12pt;
+      font-weight: 500;
+    }
+
+    &.loading-text {
+      font-family: "Gilroy", sans-serif;
+      font-size: 12pt;
+      font-weight: 500;
+    }
+  }
+}

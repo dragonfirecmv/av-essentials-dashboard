@@ -1,0 +1,64 @@
+.view-modal-delete-a-goods-item {
+  width: 400px;
+  height: 300px;
+  padding: 16px;
+  z-index: 9;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "." "." ".";
+
+  & > .area-content {
+    padding-top: 21px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+    gap: 16px;
+
+    & > .section-goods-img,
+    & > .section-goods-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > .section-goods-img {
+      
+      & > .image-enclosure {
+        width: 72px;
+        height: 72px;
+        border-radius: 6px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+        }
+      }
+    }
+  }
+
+  & > .area-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+  }
+
+  .tx {
+    font-family: "Source Sans Pro", sans-serif;
+
+    &.goods-name {
+      font-size: 18pt;
+      font-weight: 700;
+    }
+
+    &.modal-title {
+      font-family: "Gilroy", sans-serif;
+      font-size: 18pt;
+      font-weight: 700;
+    }
+  }
+}

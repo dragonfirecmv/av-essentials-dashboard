@@ -1,0 +1,38 @@
+{
+  "menu": {
+    "category": "Kategori",
+    "login": "Masuk",
+    "register": "Daftar",
+    "cart": "Keranjang",
+    "vendor": "Vendor"
+  },
+  "modals": {
+    "cart_empty_msg": "Keranjang anda masih kosong.",
+    "cart_open": "Buka keranjang",
+    "vendor_open": "Buka vendor",
+    "user_see_profile": "Lihat profil",
+    "user_log_out": "Keluar"
+  },
+  "categories": {
+    "equipment": "Perlengkapan",
+    "talents": "Talenta",
+    "event_organizer": "Event organizer"
+  },
+  "footer": {
+    "definition": "AdaVendor adalah sebuah platform yang dapat menyediakan segala kebutuhan event mulai dari konsultasi sponsorship, kebutuhan perlengkapan acara, event organizer hingga pengisi acara.",
+    "about": "Tentang",
+    "about_us": "Tentang Kami",
+    "about_press": "Pers",
+    "about_stats": "Stats",
+    "about_jobs": "Pekerjaan",
+    "services": "Layanan",
+    "services_haveQuestions": "Ingin bertanya?",
+    "services_termsOfServices": "Syarat dan Ketentuan",
+    "services_privacyPolicy": "Kebijakan Privasi",
+    "services_userGuide": "Panduan Pengguna",
+    "more": "Lainnya",
+    "more_ourBlog": "Blog Kami",
+    "more_rnd": "Riset (segera)",
+    "copyright": "Hak Cipta © 2019 Adavendor.com"
+  }
+}

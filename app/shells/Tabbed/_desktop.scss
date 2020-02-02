@@ -1,0 +1,25 @@
+.shell-tabbed-desktop {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: "left-area main-area";
+
+  & > .area-drawer {
+    grid-area: left-area;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-drawer-background);
+  }
+
+  & > .area-content {
+    grid-area: main-area;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-root-base-background);
+  }
+}

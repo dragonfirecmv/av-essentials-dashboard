@@ -1,0 +1,52 @@
+.view-drawer-main {
+  
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas: "." "area-tabs" ".";
+
+  background-color: var(--color-drawer-background);
+  border-right: 1px solid var(--color-drawer-border-right);
+
+  & > .enclosure-drawer-tabs {
+    grid-area: area-tabs;
+
+    & > .drawer-tab-btn {
+      width: 64px;
+      height: 64px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      & > .drawer-tab-content {
+        height: auto;
+        width: 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          height: auto;
+          width: 18px;
+
+          .path-fill {
+            fill: rgb(120, 126, 136)
+          }
+        }
+      }
+
+      &.active {
+        background-color: var(--color-drawer-tab-active-background);
+
+        & > .drawer-tab-content svg .path-fill {
+          fill: rgba($color: white, $alpha: 1.0);
+        }
+      }
+    }
+  }
+}

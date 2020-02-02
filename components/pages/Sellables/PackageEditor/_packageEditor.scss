@@ -1,0 +1,136 @@
+.package-editor-page {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "commandbar-area" "content-area";
+
+  & > .command-bar {
+    height: 56px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas: "back-btn-area" "title-area" "action-area";
+
+    & > .area-back-button {
+      width: 56px;
+      border-right: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+      svg {
+        width: 16px;
+      }
+    }
+
+    & > .area-title {
+      width: 100%;
+      height: 100%;
+      padding: 0 16px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & > .area-actions {
+      height: 100%;
+
+      & > .bordered {
+        height: 100%;
+        padding: 0 8px;
+        border-left: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  & > .content {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas: ". .";
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 0.5fr 1fr;
+    }
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 0.6fr 1fr;
+    }
+
+    & > .area-details {
+      width: 100%;
+      height: 100%;
+      border-right: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas: "." ".";
+
+      .vendor-specific {
+        border-top: 1px solid rgba($color: #000000, $alpha: 0.05);
+      }
+
+    }
+
+    & > .area-additionals {
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "." ".";
+
+      & > .tab-bar {
+        height: 52px;
+        width: 100%;
+        padding: 0 8px;
+        background-color: rgba($color: #000000, $alpha: 0.02);
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      & > .editor-area > div {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+  }
+
+  .tx {
+    color: rgb(66, 74, 91);
+    font-family: "Gilroy";
+
+    &.page-title {
+      font-size: 16pt;
+      font-weight: 700;
+    }
+
+    &.page-subtitle {
+      font-size: 9pt;
+      font-weight: 700;
+      opacity: 0.7;
+    }
+  }
+}

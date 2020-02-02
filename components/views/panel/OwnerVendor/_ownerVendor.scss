@@ -1,0 +1,52 @@
+.view-panel-owner-vendor {
+  width: 100%;
+  overflow: visible;
+
+  .card-vendor-details {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+    gap: 8px;
+
+    & > .section-pic {
+      width: 100%;
+
+      & > .enclosing-image {
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    & > .section-vendor-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  .tx {
+    &.owner-vendor-info {
+      opacity: 0.6;
+    }
+
+    &.owner-vendor-name {
+      width: 100%;
+      font-size: 16pt;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

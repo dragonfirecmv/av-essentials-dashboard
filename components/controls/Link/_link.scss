@@ -1,0 +1,23 @@
+.avlink-link {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Geomanist";
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+  }
+
+  &.primary {
+    color: var(--color-link);
+    
+    &:hover {
+      color: var(--color-link-hover);
+    }
+  }
+
+  &.disabled {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

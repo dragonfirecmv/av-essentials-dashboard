@@ -1,0 +1,55 @@
+.av-container {
+  
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  .enclosure-content {
+
+    &.default {
+      width: 95vw;
+      height: 100%;
+    }
+
+    &.bootstrap {
+      height: 100%;
+      
+      @media (min-width: 1201px) {
+        width: 1140px;
+      }
+    
+      @media (max-width: 1200px) {
+        width: 960px;
+      }
+    
+      @media (max-width: 992px) {
+        width: 720px;
+      }
+    
+      @media (max-width: 768px) {
+        width: 540px;
+      }
+    
+      @media (max-width: 576px) {
+        
+        padding: 0 16px;
+      }
+    }
+
+    &.TKPDA {
+
+      width: 95vw;
+      
+      @media (min-width: 1200px) {
+        width: 1190px;
+      }
+    }
+
+    &.nopadding {
+      
+      height: 100%;
+    }
+  }
+
+}

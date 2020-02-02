@@ -1,0 +1,61 @@
+.av-chip {
+  width: fit-content;
+  height: auto;
+  margin: 2px;
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &.clickable {
+    cursor: pointer;
+  }
+
+  &.style-default {
+    background-color: rgb(248, 250, 251);
+
+    &.clickable {
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(244, 247, 248);
+      }
+
+      &:active {
+        background-color: rgb(239, 243, 246);
+      }
+    }
+  }
+
+  &.style-wireframe {
+    border: 1px solid rgba(66, 74, 91, 0.2);
+
+    &.clickable {
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid rgba(66, 74, 91, 0.3);
+      }
+
+      &:active {
+        border: 1px solid rgba(66, 74, 91, 0.5);
+      }
+    }
+  }
+
+  .tx {
+    color: rgb(66, 74, 91);
+
+    &.chip-text {
+      font-family: "Gilroy", sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

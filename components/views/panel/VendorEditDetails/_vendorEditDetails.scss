@@ -1,0 +1,67 @@
+.panel-vendor-edit-details-view {
+  width: 100%;
+  height: 100%;
+  padding: 32px 40px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > .section {
+    width: 100%;
+    overflow: visible;
+
+    &.picture {
+      overflow: visible;
+      margin-bottom: 8px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > .picture-enclosing {
+        width: 144px;
+        height: 144px;
+        position: relative;
+        margin-bottom: 8px;
+        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+        border-radius: 999px;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .overlay-edit {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+
+          background-color: rgba($color: #000000, $alpha: 0.5);
+
+          display: none;
+          align-items: center;
+          justify-content: center;
+
+        }
+
+        &.ready:hover {
+          .overlay-edit {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .tx {
+    &.overlay {
+      color: white;
+    }
+  }
+}

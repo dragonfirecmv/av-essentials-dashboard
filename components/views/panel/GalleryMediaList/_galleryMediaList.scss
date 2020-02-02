@@ -1,0 +1,147 @@
+.view-panel-gallery-media-list {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  overflow-y: auto;
+
+  .accordion-enclosure {
+    padding-bottom: 16px;
+
+    .area-list-existing,
+    .area-to-be-deleted {
+      padding: 8px;
+
+      .area-enclosing-gallery {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        .enclosure {
+          padding: 8px;
+
+          .enclosing-picture {
+            width: 128px;
+            height: 72px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+
+              &.grayscale {
+                filter: grayscale(100%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    .enclosure-upload {
+      padding: 16px;
+
+      .enclosing-action {
+        width: 100%;
+        padding-bottom: 16px;;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". .";
+        gap: 8px;
+
+      }
+
+      .enclosure-file-candidate {
+        width: 100%;
+        padding: 12px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". . .";
+
+        .column {
+          &.img {
+            .enclosure-img {
+              width: 100px;
+              height: 66px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+              }
+            }
+          }
+
+          &.action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .av-button {
+              svg {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tx {
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(66, 74, 91);
+
+    &.filename {
+      padding: 8px;
+      font-size: 12pt;
+      font-weight: 500;
+    }
+
+    &.table-header {
+      font-family: "Gilroy", sans-serif;
+      font-weight: 700;
+    }
+
+    &.info-title {
+      padding: 8px;
+      font-size: 16pt;
+      font-weight: 700;
+
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+      overflow-wrap: break-word;
+    }
+
+    &.info-subtitle {
+      padding: 8px;
+      font-size: 12pt;
+      font-weight: 500;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &.address-text {
+      height: fit-content;
+      font-size: 12pt;
+      font-weight: 500;
+    }
+
+    &.loading-text {
+      font-family: "Gilroy", sans-serif;
+      font-size: 12pt;
+      font-weight: 500;
+    }
+  }
+}
